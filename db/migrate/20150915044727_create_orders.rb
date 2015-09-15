@@ -5,7 +5,7 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :user_id
       t.integer :quantity
 
-      t.timestamp
+      t.timestamps null: false
     end
   end
 end

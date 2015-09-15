@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>User</th>
+      <th>Quantity</th>
+      <th>Buy At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.id %></td>
+        <td><%= order.user.email %></td>
+        <td><%= order.quantity %></td>
+        <td><%= order.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
