@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <% if user_signed_in? %>
+      <p>Welcome, <%= current_user.email %>!</p>
+      <%# if current_user && current_user.is_admin %>
+        <%#= link_to('Manage OAuth Application', oauth_applications_path) %>
+        <br>
+      <%# end %>
+      <%= link_to('Edit', edit_user_registration_path) %>
+      <br>
+      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    <% else %>
+      <p>Welcome, guest!</p>
+      <%= link_to('Login', new_user_session_path) %>
+      <br>
+      <%= link_to('Register', new_user_registration_path)  %>
+    <% end %>
+  </div>
+</div>

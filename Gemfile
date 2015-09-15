@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+# Database
+gem 'pg'
+
+# User Authentication 
+gem 'devise'
