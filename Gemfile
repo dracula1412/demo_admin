@@ -50,3 +50,6 @@ gem 'pg'
 
 # User Authentication 
 gem 'devise'
+
+# Admin Manager
+gem 'activeadmin', github: 'activeadmin'
